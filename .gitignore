@@ -1,0 +1,46 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.env
+
+# ---- Jupyter ----
+*.ipynb_checkpoints
+
+# ---- 数据与模型权重（绝不上传）----
+data/
+datasets/
+*.csv
+*.npy
+*.npz
+*.h5
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.dcm
+*.nii
+*.nii.gz
+!requirements.txt
+
+# ---- 实验结果与日志 ----
+runs/
+logs/
+outputs/
+wandb/
+*.log
+
+# ---- 系统与编辑器 ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ---- 密钥 ----
+*.key
+secrets.yaml
