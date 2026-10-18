@@ -12,26 +12,29 @@
 | [`snippets/`](snippets/) | 可复用代码片段，后续项目直接引用 |
 | [`errors/`](errors/) | 踩坑记录：报错原文 + 原因 + 解法 |
 | [`templates/`](templates/) | 笔记模板（新笔记从这里复制） |
-| [`docs/`](docs/) | 操作手册。目前有 [`git-manual.md`](docs/git-manual.md)：Git 与 GitHub 全流程（配置 / 认证 / 日常 / 撤销 / 报错 / 换电脑） |
+| [`docs/`](docs/) | 操作手册：[`git-manual.md`](docs/git-manual.md)（Git 与 GitHub 全流程）、[`environment.md`](docs/environment.md)（本机环境说明） |
 
 ## 进度
 
-### 阶段 0：工具与地基（2026.10 – 2026.11）
+### 1
 
-- [ ] W1 Python 语法基础 → [`python/01-basics/`](python/01-basics/)
-- [ ] W2 函数与数据结构
-- [ ] W3 文件与异常
-- [ ] W4 numpy 与 matplotlib
-- [ ] W5 pandas
-- [ ] W6 Git / Linux / CLIP 汇报
+- [x] Git / GitHub
+- [x] conda 环境与 CUDA 版 PyTorch
+- [ ] Python 语法基础 → [`python/01-basics/`](python/01-basics/)
+- [ ] 函数与数据结构
+- [ ] 文件与异常
+- [ ] 类与继承
+- [ ] numpy 与 matplotlib
+- [ ] pandas
+- [ ] Linux 命令行
 
-### 阶段 1：机器学习与 PyTorch（2026.11 – 2027.02）
+### 2
 
-- [ ] W7–W9 机器学习基本概念、线性与逻辑回归
-- [ ] W10–W12 多层感知机、深度学习计算
-- [ ] W13–W16 CNN 与经典架构（LeNet / VGG / ResNet）
-- [ ] W17 优化算法（SGD / Momentum / Adam）
-- [ ] W18 注意力与 Transformer
+- [ ] 机器学习基本概念、线性与逻辑回归
+- [ ] 多层感知机、深度学习计算
+- [ ] CNN 与经典架构（LeNet / VGG / ResNet）
+- [ ] 优化算法（SGD / Momentum / Adam）
+- [ ] 注意力与 Transformer
 
 ## 学习原则
 
