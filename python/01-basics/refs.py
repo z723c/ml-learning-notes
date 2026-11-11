@@ -61,5 +61,7 @@
 # else:
 #     print("False")
     
-True = 3
-print(True)
+# True = 3            # 特殊字符不能当标识符
+# 1name = 3           # 标识符不以数字开头
+# name&first = 3      # 标识符不能包含特殊字符
+# name@second = 3     # 标识符不能包含特殊字符
