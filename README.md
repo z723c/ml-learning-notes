@@ -20,7 +20,7 @@
 
 - [x] Git / GitHub
 - [x] conda 环境与 CUDA 版 PyTorch
-- [ ] Python 语法基础 → [`python/01-basics/`](python/01-basics/)
+- [ ] Python 语法基础 → [`python/notes/`](python/notes/)
 - [ ] 函数与数据结构
 - [ ] 文件与异常
 - [ ] 类与继承

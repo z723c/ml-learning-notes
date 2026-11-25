@@ -585,7 +585,7 @@ On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes not staged for commit:          ← 已修改但未 add
-  modified:   python/01-basics/notes.md
+  modified:   python/notes/01_variables.md
 
 Untracked files:                         ← 新文件，git 尚未跟踪
   python/02-functions/notes.md
@@ -600,7 +600,7 @@ nothing added to commit but untracked files present
 
 ```bash
 git add .                            # 当前目录下的全部改动（最常用）
-git add python/01-basics/notes.md    # 指定单个文件
+git add python/notes/01_variables.md    # 指定单个文件
 git add python/                       # 指定目录
 git add -A                           # 包含删除操作（较新版本的 git 中 add . 也已包含删除）
 git add -p                           # 逐块选择要提交的内容
@@ -865,9 +865,9 @@ git merge --abort
 ### 7.1 🔴 改错了，但还没 add
 
 ```bash
-git restore python/01-basics/notes.md     # 丢弃该文件的全部未暂存改动
+git restore python/notes/01_variables.md     # 丢弃该文件的全部未暂存改动
 git restore .                             # 丢弃全部未暂存改动
-git checkout -- python/01-basics/notes.md # 旧命令，效果相同
+git checkout -- python/notes/01_variables.md # 旧命令，效果相同
 ```
 
 > ⚠️ **这是全套命令里少数真正"丢了就没了"的操作。** 这些改动从来没进过 git（没 add、没 commit），reflog 里也没有记录。
@@ -877,8 +877,8 @@ git checkout -- python/01-basics/notes.md # 旧命令，效果相同
 ### 7.2 🟢 add 错了，想取消暂存
 
 ```bash
-git restore --staged python/01-basics/notes.md   # 新命令
-git reset HEAD python/01-basics/notes.md          # 旧命令
+git restore --staged python/notes/01_variables.md   # 新命令
+git reset HEAD python/notes/01_variables.md          # 旧命令
 git restore --staged .                            # 取消全部暂存
 ```
 
@@ -1094,7 +1094,7 @@ git stash drop             # 丢弃最近一条 stash
 > **"我按某个方案修了，但报错一模一样"** —— 这几乎总是说明**病因判断错了**，而不是"修得不够"。
 > 此时应退回第 1 步重新读报错，**而不是在原方案上叠加新的修法**（见 [8.21](#s8-21)）。
 
-> **延伸阅读**：**[网络问题排查实例](网络问题排查实例.md)** —— 一次三阶段的完整排查复盘。
+> **延伸阅读**：**[网络问题排查实例](network-troubleshooting.md)** —— 一次三阶段的完整排查复盘。
 > 它说明了一件比单个报错更重要的事：**针对错误病因所做的修复，会以一个新问题的形式回来。**
 
 
@@ -1497,7 +1497,7 @@ nslookup ssh.github.com
 >
 > **在它们之上再手工加规则，会产生"谁赢"的不确定性**（本机实测：Windows 采用了文件中靠前的那条），而且一旦出问题极难排查。
 >
-> 完整的三阶段排查案例见 **[网络问题排查实例](网络问题排查实例.md)**。
+> 完整的三阶段排查案例见 **[网络问题排查实例](network-troubleshooting.md)**。
 
 **适合用的情形：**
 
@@ -1670,7 +1670,7 @@ git push origin v1.0.0
 研究方向：医学影像 × 视觉-语言模型 × 可解释性 AI
 
 - 正在开展：基于概念瓶颈的可解释医学多模态诊断
-- 学习笔记：[ml-learning-notes](换成你的仓库地址)
+- 学习笔记：[ml-learning-notes](https://github.com/z723c/ml-learning-notes)
 - 联系方式：邮箱
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=你的用户名)
@@ -1781,7 +1781,7 @@ git worktree add ../项目-实验分支 feature-x
 cd /c/Users/13127/Documents/ml-learning-notes     # 替换为你的仓库路径
 
 git status                       # 查看改动
-git add .                        # 或 git add python/01-basics/
+git add .                        # 或 git add python/notes/
 git commit -m "notes(python): 补充变量是引用而非拷贝"
 git push
 ```
@@ -2222,7 +2222,7 @@ push 被拒绝
 
 **修订记录**
 
-- **v1.5**：[8.21](#s8-21) 增加「动手前先盘点机器上已有的网络工具」一节（Steam++ / aTrust / Clash 会在 hosts 和本地代理上留下自己的规则）；[8.0](#s8-0) 增加延伸阅读链接。新增独立文档：**[网络问题排查实例](网络问题排查实例.md)**（SSH 报错 → DNS 失败 → 浏览器 SSL 错误的三阶段因果链复盘）。
+- **v1.5**：[8.21](#s8-21) 增加「动手前先盘点机器上已有的网络工具」一节（Steam++ / aTrust / Clash 会在 hosts 和本地代理上留下自己的规则）；[8.0](#s8-0) 增加延伸阅读链接。新增独立文档：**[网络问题排查实例](network-troubleshooting.md)**（SSH 报错 → DNS 失败 → 浏览器 SSL 错误的三阶段因果链复盘）。
 - **v1.4**：新增 [8.0 排查顺序](#s8-0)（把"先读证据再猜"固化为流程）；新增 [8.19 `Too many arguments`](#s8-19)（选项大小写写错的真实案例）、[8.20 `Could not resolve hostname`](#s8-20)（先查域名拼写，再查 DNS）、[8.21 hosts 文件](#s8-21)（何时可用、何时是坑、怎么回退）、[8.22 全角空格与弯引号](#s8-22)。以上四节均来自 2026-10-15 的真实踩坑。
 - **v1.3**：措辞重新校准——恢复生动的标题与口语化表达（因手册主要供自用），同时保留可点击目录与全部技术内容的精确性。
 - **v1.2**：目录改为可点击跳转（采用显式锚点，并增加场景索引）；全文语气统一为技术文档表述；为全部章节与子节添加锚点。
